@@ -1,58 +1,172 @@
-@import "tailwindcss";
-
-
-
-
-.container{
-  width: 177px;
-  height: 282px;
-  background-color: #F5EFE1;
-  border-radius: 10px;
-  margin: 100px;
-  justify-content: center;
-  align-content: center;
-  padding: 0px 0px 0px 12px;
+* {
+  border: 0;
+  margin: 0;
 }
 
-.name{
-  font-family: 'DM Serif Display';
-  font-size: 18px;
-  font-weight: bold;
-  color: rgba(47, 47, 47, 1);
-  display: inline-block;
-
-}
-.author{
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 12px;
-  letter-spacing: -2%;
-  color: rgba(133, 133, 133, 1);
-
-}
-.price{
-  font-family: 'DM Serif Display';
-  font-size: 18px;
-  font-weight: bold;
-  color: rgba(47, 47, 47, 1);
-}
-
-.buy{
+.top-bar{
+  background-color: #fff;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  height: 28px;
-  width: 74px;
-  font-size: 14px;
-  border-radius: 4px;
-  background-color: black;
-  color: white;
+  padding: 15px 19px;
+  font-size: 17px;
+  width: 100%; 
+  box-sizing: border-box;
 }
-.footer{
+
+.n-s {
   display: flex;
-  flex-direction: columns;
-  gap: 40px;
+  gap: 18px ;
 }
-.middle{
-  padding: 0% 0% 16px 0%;
+
+.top-bar img{
+  height: 22px;
+}
+
+.top-bar a {
+text-decoration: none; 
+border: none;
+}
+
+.navigation-bar {
+display: flex;
+border-radius: 4px;
+padding: 10px;
+justify-content: flex-start; 
+gap: 10px;
+overflow-x: auto;
+white-space: nowrap; 
+}
+
+.navigation-bar::-webkit-scrollbar {
+display: none;
+}
+
+
+.navigation-bar {
+scrollbar-width: none; 
+}
+
+.navigation-bar a {
+  display: inline-block;
+  padding: 6px 20px;
+  background-color: #fff;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  text-decoration: none;
+  border-radius: 7px;
+  font-size: 14px;
+  border: 1.4px solid #c6aa65;
+  margin: 0;
+}
+
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  grid-template-columns: 1fr; 
+  gap: 20px; 
+  padding: 20px;
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+
+.card {
+padding: 15px;
+background-color: #f5efe1;
+border-radius: 8px;
+width: 150px; 
+flex: 1 1 auto;
+box-sizing: border-box;
+min-width: 150px; 
+max-width: 200px;  
+}
+
+.card img {
+  width: 100%; 
+  height: 180px;
+  border-radius: 8px;
+  object-fit: cover;
+ }
+
+
+@media (min-width: 1024px) {
+.card {
+    width: 200px;
+}
+}
+
+@media (max-width: 1023px) and (min-width: 768px) {
+.card {
+    width: 180px;
+}
+}
+
+@media (max-width: 767px) {
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.card {
+    width: 100%;
+}
+}
+
+
+.card h3 {
+  font-size: 16px;
+  color: #333;
+}
+
+.card p {
+  color: #777;
+  font-size: 12px;
+  margin: 2px 2px;
+}
+.price-container {
+  margin-top: 8px;
+}
+
+.card button {
+  padding: 6px 15px;
+  background-color: #2f2f2f;
+  color: #fff;
+  border: none;
+  font-size: 12px;
+  border-radius: 5px;
+}
+
+.card .price-container {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+}
+
+.bottom-bar {
+  position: fixed; 
+  bottom: 0;
+  left: 0;
+  width: 100%; 
+  background-color: #ffffff; 
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  z-index: 10;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.bottom-bar button {
+  color: white;
+  background: transparent;
+  border: none;
+  padding: 10px;
+}
+
+.bottom-bar img {
+  height: 30px;
 }

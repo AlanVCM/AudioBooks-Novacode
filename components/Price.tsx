@@ -1,13 +1,13 @@
 import React from 'react'
-interface FooterProps{
-  price: string,
+interface PriceProps{
+    price: string,
 }
 
-const Price = ({price}:FooterProps) => {
+const Price = ({price}:PriceProps) => {
   return (
-    <div className="footer">
-      <h2 className="price">₹{price}</h2>
-      <button className="buy">Buy</button>
+    <div className="price-container">
+        <h3 className="price">₹ {price}</h3>
+        <button>Buy</button>
     </div>
   )
 }

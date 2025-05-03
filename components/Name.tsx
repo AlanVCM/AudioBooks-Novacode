@@ -1,15 +1,15 @@
 import React from 'react'
-export interface HeaderProps{
-  name: string,
-  author: string,
+interface NameProps{
+    name: string,
+    author: string,
 }
-const Name = ({name, author} :HeaderProps) => {
+const Name = ({name, author}:NameProps) => {
   return (
-    <div className="middle">
-      <p className="name">{name}</p>
-      <p className="author">By {author}</p>
-    </div>
+    <div>
+        <h3>{name}</h3>
+        <p>By {author}</p>
+        </div>
   )
 }
 
-export default Name;
+export default Name
